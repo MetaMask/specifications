@@ -112,7 +112,7 @@ If present, **MUST** be equal to the [corresponding `package.json` field](https:
 
 #### `shasum`
 
-**MUST** be the [Base64-encoded] string representation of the [SHA-256] hash of the [Snap source file](#dist-bundle-js).
+**MUST** be the [Base64]-encoded string representation of the [SHA-256] hash of the [Snap source file](#dist-bundle-js).
 
 #### `location`
 
