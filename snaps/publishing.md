@@ -79,6 +79,9 @@ Continuing with the example of the Snap published to npm as `@metamask/example-s
     }
 ```
 
+> Note that the manifest intentionally does not contain any information explicitly identifying its author.
+> Author information should be verifiable out-of-band at the point of Snap installation, but that is beyond the scope of this specification.
+
 ### `version`
 
 **MUST** be a valid [SemVer] version string and equal to the [corresponding `package.json` field](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#version).
