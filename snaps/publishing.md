@@ -29,9 +29,9 @@ example-snap/
 
 The Snap "source" or "bundle" file can be named anything and kept anywhere in the file hierarchy, but it **MUST**:
 
-* contain the entire source of the Snap program, including all dependencies.
-* execute under [SES].
-* be compatible with the [MetaMask Snaps API](#dist-bundle-js). <!-- TODO: Add link -->
+- contain the entire source of the Snap program, including all dependencies.
+- execute under [SES].
+- be compatible with the [MetaMask Snaps API](#dist-bundle-js). <!-- TODO: Add link -->
 
 ### `package.json`
 
@@ -54,29 +54,29 @@ The Snap manifest file **MUST** be named `snap.manifest.json` and located in the
 Continuing with the example of the Snap published to npm as `@metamask/example-snap`, its manifest could look something like this:
 
 ```json
-    {
-      "version": "0.2.2",
-      "proposedName": "@metamask/example-snap",
-      "description": "An example snap.",
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/MetaMask/example-snap.git"
-      },
-      "source": {
-        "shasum": "w3FltkDjKQZiPwM+AThnmypt0OFF7hj4ycg/kxxv+nU=",
-        "location": {
-          "npm": {
-            "filePath": "dist/bundle.js",
-            "packageName": "@metamask/example-snap",
-            "registry": "https://registry.npmjs.org/"
-          }
-        }
-      },
-      "initialPermissions": {
-        "snap_confirm": {}
-      },
-      "manifestVersion": "0.1"
+{
+  "version": "0.2.2",
+  "proposedName": "@metamask/example-snap",
+  "description": "An example snap.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MetaMask/example-snap.git"
+  },
+  "source": {
+    "shasum": "w3FltkDjKQZiPwM+AThnmypt0OFF7hj4ycg/kxxv+nU=",
+    "location": {
+      "npm": {
+        "filePath": "dist/bundle.js",
+        "packageName": "@metamask/example-snap",
+        "registry": "https://registry.npmjs.org/"
+      }
     }
+  },
+  "initialPermissions": {
+    "snap_confirm": {}
+  },
+  "manifestVersion": "0.1"
+}
 ```
 
 > Note that the manifest intentionally does not contain any information explicitly identifying its author.
@@ -150,11 +150,11 @@ This section may be expanded to include other hosting platforms in the future, b
 **MUST** be the HTTPS URL of the npm registry where the package is hosted.
 **MUST** be equal to the registry URL specified in the [`publishConfig` field of `package.json`](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#publishconfig), if any.
 
-[Base64]: https://developer.mozilla.org/en-US/docs/Glossary/Base64
-[EIP-2255]: https://eips.ethereum.org/EIPS/eip-2255
-[JSON-RPC 2.0]: https://www.jsonrpc.org/specification
-[MetaMask]: https://metamask.io
+[base64]: https://developer.mozilla.org/en-US/docs/Glossary/Base64
+[eip-2255]: https://eips.ethereum.org/EIPS/eip-2255
+[json-rpc 2.0]: https://www.jsonrpc.org/specification
+[metamask]: https://metamask.io
 [npm]: https://npmjs.com
-[SHA-256]: https://en.wikipedia.org/wiki/SHA-2
-[SemVer]: https://semver.org/
-[SES]: https://agoric.com/documentation/guides/js-programming/ses/ses-guide.html
+[sha-256]: https://en.wikipedia.org/wiki/SHA-2
+[semver]: https://semver.org/
+[ses]: https://agoric.com/documentation/guides/js-programming/ses/ses-guide.html
