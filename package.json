@@ -1,0 +1,17 @@
+{
+  "name": "draft-specifications",
+  "version": "0.0.0",
+  "description": "Specifications that we're riffing on and want to keep secret.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.comMetaMask/draft-specifications.git"
+  },
+  "scripts": {
+    "lint": "prettier '**/*.json' '**/*.md' '**/*.yml' --ignore-path .gitignore",
+    "lint:fix": "yarn lint --write"
+  },
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  },
+  "private": true
+}
