@@ -16,6 +16,8 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 The published files of an example Snap published to npm under the package name `@metamask/example-snap` may look like this:
 
+> This diagram is non-normative.
+
 ```text
 example-snap/
 ├─ dist/
@@ -24,14 +26,6 @@ example-snap/
 ├─ README.md
 ├─ snap.manifest.json
 ```
-
-### `dist/bundle.js`
-
-The Snap "source" or "bundle" file can be named anything and kept anywhere in the file hierarchy, but it **MUST**:
-
-- contain the entire source of the Snap program, including all dependencies.
-- execute under [SES].
-- be compatible with the [MetaMask Snaps API](#dist-bundle-js). <!-- TODO: Add link -->
 
 ### `package.json`
 
@@ -45,13 +39,26 @@ Just like any npm package, a Snap **SHOULD** contain a helpful readme file.
 
 ### `snap.manifest.json`
 
-See [the Snap manifest specification](#snap-manifest-files) below.
+See [the Snap manifest specification](#snap-manifests) below.
 
-## Snap Manifest Files
+### Snap Source File
+
+> Represented in the example as `dist/bundle.js`.
+
+The Snap "source" or "bundle" file can be named anything and kept anywhere in the package file hierarchy, but it **MUST**:
+
+- have the `.js` file extension.
+- contain the entire source of the Snap program, including all dependencies.
+- execute under [SES].
+- be compatible with the [MetaMask Snaps API](#snap-source-file). <!-- TODO: Add link -->
+
+## Snap Manifests
 
 The Snap manifest file **MUST** be named `snap.manifest.json` and located in the package root directory.
 
 Continuing with the example of the Snap published to npm as `@metamask/example-snap`, its manifest could look something like this:
+
+> This example is non-normative.
 
 ```json
 {
@@ -80,7 +87,7 @@ Continuing with the example of the Snap published to npm as `@metamask/example-s
 ```
 
 > Note that the manifest intentionally does not contain any information explicitly identifying its author.
-> Author information should be verifiable out-of-band at the point of Snap installation, but that is beyond the scope of this specification.
+> Author information should be verifiable out-of-band at the point of Snap installation, and is beyond the scope of this specification.
 
 ### `version`
 
@@ -88,7 +95,7 @@ Continuing with the example of the Snap published to npm as `@metamask/example-s
 
 ### `proposedName`
 
-**MUST** be a string less than or equal to 214 characters. <!-- This is what npm uses for the `name` field -->
+**MUST** be a string less than or equal to 214 characters. <!-- This is what npm uses for the `name` field. -->
 The Snap author's proposed name for the Snap.
 The Snap host application may display this name unmodified in its user interface.
 
@@ -96,7 +103,7 @@ The proposed name **SHOULD** be human-readable.
 
 ### `description`
 
-**MUST** be a non-empty string.
+**MUST** be a non-empty string less than or equal to 280 characters. <!-- As of 2021, a Twitter post. -->
 A short description of the Snap.
 The Snap host application may display this name unmodified in its user interface.
 **MAY** differ from the [corresponding `package.json` field](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#description-1)
