@@ -4,7 +4,7 @@ Snaps are SES-compatible JavaScript programs that integrate with [MetaMask] or a
 They communicate with the outside world via asynchronous [JSON-RPC 2.0] message passing.
 
 In the future, Snaps may be published to many different locations.
-At first, they will only be published to [npm].
+At first, they will only be published to the public [npm] registry.
 
 ## Specification Language
 
@@ -154,7 +154,9 @@ This section may be expanded to include other hosting platforms in the future, b
 
 #### `registry`
 
-**MUST** be the HTTPS URL of the npm registry where the package is hosted.
+> In the future, other registries may be supported.
+
+**MUST** be the HTTPS URL of the npm registry where the package is hosted, which **MUST** be `https://registry.npmjs.org`.
 **MUST** be equal to the registry URL specified in the [`publishConfig` field of `package.json`](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#publishconfig), if any.
 
 [base64]: https://developer.mozilla.org/en-US/docs/Glossary/Base64
