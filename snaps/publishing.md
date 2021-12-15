@@ -74,6 +74,7 @@ Continuing with the example of the Snap published to npm as `@metamask/example-s
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
+        "iconPath": "images/icon.svg",
         "packageName": "@metamask/example-snap",
         "registry": "https://registry.npmjs.org/"
       }
@@ -146,6 +147,13 @@ This section may be expanded to include other hosting platforms in the future, b
 
 **MUST** be the [Unix-style](https://en.wikipedia.org/wiki/Unix_filesystem) path from the package root directory to the Snap source file.
 **MUST** begin with the name of the Snap source file or the first directory in the path to the Snap source file.
+**MUST NOT** begin with the string "`./`".
+
+#### `iconPath`
+
+**MAY** be omitted.
+If included, **MUST** be the [Unix-style](https://en.wikipedia.org/wiki/Unix_filesystem) path from the package root directory to an `.svg` file.
+**MUST** begin with the name of the `.svg` file or the first directory in the path to the `.svg` file.
 **MUST NOT** begin with the string "`./`".
 
 #### `packageName`
