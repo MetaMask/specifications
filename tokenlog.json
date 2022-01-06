@@ -1,0 +1,7 @@
+{
+    "org": "MetaMask",
+    "repo": "specifications",
+    "tokenAddress": "0xf824a5f172ba61a050ebd166391a20932e036513",
+    "votingMethod": "STANDARD",
+    "chainId": 137
+}
