@@ -63,8 +63,8 @@ Continuing with the example of the Snap published to npm as `@metamask/example-s
 ```json
 {
   "version": "0.2.2",
-  "proposedName": "@metamask/example-snap",
-  "description": "An example snap.",
+  "proposedName": "Dialog Example",
+  "description": "An example MetaMask Snap that uses a dialog.",
   "repository": {
     "type": "git",
     "url": "https://github.com/MetaMask/example-snap.git"
@@ -81,7 +81,11 @@ Continuing with the example of the Snap published to npm as `@metamask/example-s
     }
   },
   "initialPermissions": {
-    "snap_confirm": {}
+    "snap_dialog": {},
+    "endowment:rpc": {
+      "dapps": true,
+      "snaps": false
+    }
   },
   "manifestVersion": "0.1"
 }
@@ -106,7 +110,7 @@ The proposed name **SHOULD** be human-readable.
 
 **MUST** be a non-empty string less than or equal to 280 characters. <!-- As of 2021, a Twitter post. -->
 A short description of the Snap.
-The Snap host application may display this name unmodified in its user interface.
+The Snap host application may display this description unmodified in its user interface.
 **MAY** differ from the [corresponding `package.json` field](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#description-1)
 
 ### `repository`
