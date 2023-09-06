@@ -64,7 +64,7 @@ Continuing with the example of the Snap published to npm as `@metamask/example-s
 {
   "version": "0.2.2",
   "proposedName": "Dialog Example",
-  "description": "An example MetaMask Snap that uses a dialog.",
+  "description": "An example Snap that uses a dialog.",
   "repository": {
     "type": "git",
     "url": "https://github.com/MetaMask/example-snap.git"
